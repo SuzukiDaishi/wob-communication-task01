@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+    <style>
+        #particles-js {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            z-index: 0;
+        }
+        #hero {
+            width: 100vw;
+            height: 100vh;
+            background: transparent;
+        }
+        #header {
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.2);
+        }
+        #content {
+            margin: 5vw 20vw;
+            padding: 2% 2%;
+            background: rgba(255, 255, 255, 0.95);
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js">
+        <section id="hero">
+            <div>
+                <nav id="header" class="navbar">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a class="navbar-item" href="/">
+                                <h2 class="title">BIM Checkers</h2>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        
+            <div>
+                <div id="content" class="card">
+                    <h2 class="title">Check your BMI</h2>
+                    <form action="/bmi" method="post">
+                        <div>
+                            <div class="field">
+                                <label class="label">Name</label>
+                                <div class="control">
+                                    <input name="name" class="input" type="text" placeholder="Please enter your name">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Height(cm)</label>
+                                <div class="control">
+                                    <input name="height" class="input" type="number" placeholder="Please enter your height">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Weight(kg)</label>
+                                <div class="control">
+                                    <input name="weight" class="input" type="number" placeholder="Please enter your weight">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-success" type="submit">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+    <script>bubbly();</script>
+</body>
+</html>
